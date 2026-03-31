@@ -1,146 +1,174 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lanco Zelt – Lang, lang, kurz kurz</title>
-  <meta name="description" content="Interaktive Aufbauanleitung für das Lanco Zelt mit 3D-Animationen. Lang, lang, kurz kurz." />
-  <link rel="stylesheet" href="/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lanco Zelt – Lang, lang, kurz kurz</title>
+    <meta name="description"
+        content="Interaktive Aufbauanleitung für das Lanco Zelt mit 3D-Animationen. Lang, lang, kurz kurz." />
+    <link rel="stylesheet" href="/style.css" />
 </head>
+
 <body data-theme="dark">
 
-  <!-- Loading Screen -->
-  <div id="loader">
-    <div class="loader-inner">
-      <div class="loader-bar"></div>
-      <p class="loader-text">Zelt wird aufgebaut…</p>
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-inner">
+            <div class="loader-bar"></div>
+            <p class="loader-text">Zelt wird aufgebaut…</p>
+        </div>
     </div>
-  </div>
 
-  <!-- Theme Toggle -->
-  <button id="theme-toggle" aria-label="Farbmodus wechseln" title="Farbmodus wechseln">
-    <svg class="icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    <svg class="icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-    <svg class="icon-nature" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66L12 14l-3 6h6c3.5-6 .5-14-4-18z"/></svg>
-  </button>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" aria-label="Farbmodus wechseln" title="Farbmodus wechseln">
+        <svg class="icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+        <svg class="icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+        <svg class="icon-nature" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66L12 14l-3 6h6c3.5-6 .5-14-4-18z" />
+        </svg>
+    </button>
 
-  <!-- 3D Canvas (fixed background) -->
-  <canvas id="tent-canvas"></canvas>
+    <!-- 3D Canvas (fixed background) -->
+    <canvas id="tent-canvas"></canvas>
 
-  <!-- Scroll Container -->
-  <main id="scroll-container">
+    <!-- Scroll Container -->
+    <main id="scroll-container">
 
-    <!-- Section 1: Hero -->
-    <section id="hero" class="section">
-      <div class="section-content hero-content">
-        <h1 class="hero-title">
-          <span class="hero-line hero-line-1">Lang, lang,</span>
-          <span class="hero-line hero-line-2">kurz kurz</span>
-        </h1>
-        <p class="hero-subtitle">Lanco Zelt — Aufbauanleitung</p>
-        <div class="scroll-indicator">
-          <span>Scroll</span>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-        </div>
-      </div>
-    </section>
+        <!-- Section 1: Hero -->
+        <section id="hero" class="section">
+            <div class="section-content hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-line hero-line-1">Lang, lang,</span>
+                    <span class="hero-line hero-line-2">kurz kurz</span>
+                </h1>
+                <p class="hero-subtitle">Lanco Zelt — Aufbauanleitung</p>
+                <div class="scroll-indicator">
+                    <span>Scroll</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12l7 7 7-7" />
+                    </svg>
+                </div>
+            </div>
+        </section>
 
-    <!-- Section 2: Overview / 3D Explorer -->
-    <section id="overview" class="section">
-      <div class="section-content">
-        <div class="info-card" data-animate="fade-up">
-          <h2>Das Zelt im Überblick</h2>
-          <p>Das Lanco-Zelt besteht aus zwei Arten von Stangen, verbunden durch sogenannte <strong>Knochen</strong>.</p>
-        </div>
-      </div>
-    </section>
+        <!-- Section 2: Overview / 3D Explorer -->
+        <section id="overview" class="section">
+            <div class="section-content">
+                <div class="info-card" data-animate="fade-up">
+                    <h2>Das Zelt im Überblick</h2>
+                    <p>Das Lanco-Zelt besteht aus zwei Arten von Stangen, verbunden durch sogenannte
+                        <strong>Knochen</strong>.</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="parts" class="section">
-      <div class="section-content">
-        <div class="info-card" data-animate="fade-up">
-          <div class="part-highlight">
-            <span class="part-count">12×</span>
-            <span class="part-label">Kurze Stangen</span>
-          </div>
-          <p>Ca. 1,20 m lang — bilden die <strong>Beine</strong> (je 3 pro Seite) und das <strong>Dachgitter</strong> (2×3 Querstreben).</p>
-        </div>
-      </div>
-    </section>
+        <section id="parts" class="section">
+            <div class="section-content">
+                <div class="info-card" data-animate="fade-up">
+                    <div class="part-highlight">
+                        <span class="part-count">12×</span>
+                        <span class="part-label">Kurze Stangen</span>
+                    </div>
+                    <p>Ca. 1,20 m lang — bilden die <strong>Beine</strong> (je 3 pro Seite) und das
+                        <strong>Dachgitter</strong> (2×3 Querstreben).</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="parts-long" class="section">
-      <div class="section-content">
-        <div class="info-card" data-animate="fade-up">
-          <div class="part-highlight">
-            <span class="part-count">6×</span>
-            <span class="part-label">Lange Stangen</span>
-          </div>
-          <p>Ca. 1,50 m lang — verlaufen <strong>in der Länge</strong> des Zeltes und bilden die Längsstreben des Daches.</p>
-        </div>
-      </div>
-    </section>
+        <section id="parts-long" class="section">
+            <div class="section-content">
+                <div class="info-card" data-animate="fade-up">
+                    <div class="part-highlight">
+                        <span class="part-count">6×</span>
+                        <span class="part-label">Lange Stangen</span>
+                    </div>
+                    <p>Ca. 1,50 m lang — verlaufen <strong>in der Länge</strong> des Zeltes und bilden die Längsstreben
+                        des Daches.</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Section 3: Build Steps -->
-    <section id="step-1" class="section step-section">
-      <div class="section-content">
-        <div class="step-card" data-animate="fade-up">
-          <span class="step-number">01</span>
-          <h2>Stangen zusammenstecken</h2>
-          <p>Alle Stangen mit den Knochen verbinden — aber <strong>3 Beine</strong> auf einer Seite noch <strong>nicht anstecken</strong>!</p>
-        </div>
-      </div>
-    </section>
+        <!-- Section 3: Build Steps -->
+        <section id="step-1" class="section step-section">
+            <div class="section-content">
+                <div class="step-card" data-animate="fade-up">
+                    <span class="step-number">01</span>
+                    <h2>Stangen zusammenstecken</h2>
+                    <p>Alle Stangen mit den Knochen verbinden — aber <strong>3 Beine</strong> auf einer Seite noch
+                        <strong>nicht anstecken</strong>!</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="step-2" class="section step-section">
-      <div class="section-content">
-        <div class="step-card" data-animate="fade-up">
-          <span class="step-number">02</span>
-          <h2>Innenzelt einhängen</h2>
-          <p>Das Innenzelt an den Stangen und Knochen <strong>einhängen</strong>, solange die 3 Beine noch offen sind.</p>
-        </div>
-      </div>
-    </section>
+        <section id="step-2" class="section step-section">
+            <div class="section-content">
+                <div class="step-card" data-animate="fade-up">
+                    <span class="step-number">02</span>
+                    <h2>Innenzelt einhängen</h2>
+                    <p>Das Innenzelt an den Stangen und Knochen <strong>einhängen</strong>, solange die 3 Beine noch
+                        offen sind.</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="step-3" class="section step-section">
-      <div class="section-content">
-        <div class="step-card" data-animate="fade-up">
-          <span class="step-number">03</span>
-          <h2>Außenzelt überziehen</h2>
-          <p>Das Außenzelt über die gesamte Konstruktion <strong>überziehen</strong>.</p>
-        </div>
-      </div>
-    </section>
+        <section id="step-3" class="section step-section">
+            <div class="section-content">
+                <div class="step-card" data-animate="fade-up">
+                    <span class="step-number">03</span>
+                    <h2>Außenzelt überziehen</h2>
+                    <p>Das Außenzelt über die gesamte Konstruktion <strong>überziehen</strong>.</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="step-4" class="section step-section">
-      <div class="section-content">
-        <div class="step-card" data-animate="fade-up">
-          <span class="step-number">04</span>
-          <h2>Restliche Beine anstecken</h2>
-          <p>Jetzt die <strong>3 verbliebenen Beine</strong> einstecken und das Zelt aufstellen.</p>
-        </div>
-      </div>
-    </section>
+        <section id="step-4" class="section step-section">
+            <div class="section-content">
+                <div class="step-card" data-animate="fade-up">
+                    <span class="step-number">04</span>
+                    <h2>Restliche Beine anstecken</h2>
+                    <p>Jetzt die <strong>3 verbliebenen Beine</strong> einstecken und das Zelt aufstellen.</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="step-5" class="section step-section">
-      <div class="section-content">
-        <div class="step-card" data-animate="fade-up">
-          <span class="step-number">05</span>
-          <h2>Fertig!</h2>
-          <p>Das Lanco-Zelt steht. <strong>Lang, lang, kurz kurz</strong> — so einfach geht's.</p>
-        </div>
-      </div>
-    </section>
+        <section id="step-5" class="section step-section">
+            <div class="section-content">
+                <div class="step-card" data-animate="fade-up">
+                    <span class="step-number">05</span>
+                    <h2>Fertig!</h2>
+                    <p>Das Lanco-Zelt steht. <strong>Lang, lang, kurz kurz</strong> — so einfach geht's.</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Section 4: Footer -->
-    <footer id="footer">
-      <div class="footer-content">
-        <p class="footer-catchphrase">Lang, lang, kurz kurz</p>
-        <p class="footer-brand">Lanco Zelt — Aufbauanleitung</p>
-        <p class="footer-copy">&copy; 2026</p>
-      </div>
-    </footer>
+        <!-- Section 4: Footer -->
+        <footer id="footer">
+            <div class="footer-content">
+                <p class="footer-catchphrase">Lang, lang, kurz kurz</p>
+                <p class="footer-brand">Lanco Zelt — Aufbauanleitung</p>
+                <p class="footer-copy">&copy; 2026</p>
+            </div>
+        </footer>
 
-  </main>
+    </main>
 
-  <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
