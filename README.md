@@ -52,3 +52,7 @@ docker run -p 8080:80 lanco-app
 - **12× kurze Stangen** (~1,20 m) — Beine (je 3 pro Seite) + Dach-Querstreben
 - **6× lange Stangen** (~1,50 m) — Längsstreben entlang des Daches
 - **Knochen** — Verbindungsstücke an allen Kreuzungspunkten
+
+## Lizenz
+
+MIT
